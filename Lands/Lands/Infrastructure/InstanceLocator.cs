@@ -4,6 +4,7 @@
 
     public class InstanceLocator
     {
+        
         #region Properties
         public MainViewModel Main
         {
