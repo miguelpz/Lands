@@ -135,5 +135,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_action_translate.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\plant.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

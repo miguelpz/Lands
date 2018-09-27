@@ -3,22 +3,40 @@
 namespace Lands.ViewModels
 {
     using Models;
+   
     using System;
     using System.Collections.ObjectModel;
     using System.Linq;
+    
 
-    public class LandViewModel:BaseViewModel
+    public class LandViewModel : BaseViewModel
     {
         #region Attributes
         private ObservableCollection<BorderItemViewModel> borders;
         private ObservableCollection<Currency> currencies;
+        private ObservableCollection<Language> languages;
+
         #endregion
 
-        #region Propperties
-        public Land Land
+
+       
+
+
+
+
+
+    #region Propperties
+    public Land Land
         {
             get;
             set;
+        }
+
+
+        public ObservableCollection<Language> Languages
+        {
+            get { return this.languages; }
+            set { SetValue(ref this.languages, value); }
         }
 
         public ObservableCollection<BorderItemViewModel> Borders
@@ -38,8 +56,12 @@ namespace Lands.ViewModels
         public LandViewModel(Land land)
         {
             this.Land = land;
+            
             this.LoadBorders();
             this.Currencies = new ObservableCollection<Currency>(this.Land.Currencies);
+            this.Languages = new ObservableCollection<Language>(this.Land.Languages);
+
+         
         }
         #endregion
 
@@ -64,5 +86,11 @@ namespace Lands.ViewModels
             }
         }
         #endregion
-    }
+
+        
+}
+
+
+
+
 }

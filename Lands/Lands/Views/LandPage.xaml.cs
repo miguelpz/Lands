@@ -12,9 +12,14 @@ namespace Lands.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LandPage : ContentPage
 	{
-		public LandPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+        
+        public LandPage ()
+        {
+        	InitializeComponent ();
+
+        }
+
+        
+
+    }
 }
